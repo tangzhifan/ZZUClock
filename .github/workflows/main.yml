@@ -1,6 +1,5 @@
 name: AutoSignIn
 on:
-    workflow_dispatch:
     schedule:
     #UTC时间16点对应北京时间0点
     - cron: '30 16 * * *'
@@ -13,7 +12,7 @@ jobs:
       - name: Setup
         uses: actions/setup-python@v1
         with: 
-            python-version: 3.7
+            python-version: 3.9
       - name: Install
         run: 
             pip install -r requirements.txt
